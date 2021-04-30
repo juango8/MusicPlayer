@@ -2,4 +2,15 @@
     <string name="app_name">MusicPlayer</string>
     <string name="play_button">PLAY</string>
     <string name="pause_button">PAUSE</string>
+    <string name="name_of_the_song">name of the song</string>
+    <string name="author">author</string>
+    <string name="image_of_album">image of album</string>
+    <string name="button_play_pause">button that can be play or pause</string>
+    <string name="contentDescription_image_of_the_album">image of the album</string>
+    <string name="label_author">Author:</string>
+    <string name="label_album">Album:</string>
+    <string name="label_genre">Genre:</string>
+    <string name="label_year">Year:</string>
+    <string name="label_release">Released Year:</string>
+    <string name="backButton">backButton</string>
 </resources>

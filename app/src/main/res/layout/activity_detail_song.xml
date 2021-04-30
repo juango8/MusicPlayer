@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailSong">
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@id/horizontalGuideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/inverse_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/horizontalGuideline" />
+
+    <ImageView
+        android:id="@+id/image_album"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/width_cover_album"
+        android:background="@drawable/inverse_background"
+        android:contentDescription="@string/contentDescription_image_of_the_album"
+        android:padding="@dimen/padding_standard"
+        android:src="@drawable/ic_music_note_24"
+        app:layout_constraintBottom_toTopOf="@id/horizontalGuideline"
+        app:layout_constraintEnd_toEndOf="@id/verticalGuideLine"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/nameOfSong"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:maxLines="3"
+        android:padding="@dimen/padding_standard"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/detail_name_text"
+        app:layout_constraintBottom_toTopOf="@id/horizontalGuideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/verticalGuideLine"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="200dp"
+        tools:layout_editor_absoluteY="54dp"
+        tools:text="Name of Song" />
+
+    <TextView
+        android:id="@+id/labelAuthor"
+        style="@style/member_label"
+        android:text="@string/label_author"
+        app:layout_constraintBottom_toTopOf="@+id/labelAlbum"
+        app:layout_constraintEnd_toStartOf="@+id/infoVerticalGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalGuideline"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/labelAlbum"
+        style="@style/member_label"
+        android:text="@string/label_album"
+        app:layout_constraintBottom_toTopOf="@+id/labelGenre"
+        app:layout_constraintEnd_toStartOf="@+id/infoVerticalGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/labelAuthor"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/labelGenre"
+        style="@style/member_label"
+        android:text="@string/label_genre"
+        app:layout_constraintBottom_toTopOf="@+id/labelRelease"
+        app:layout_constraintEnd_toStartOf="@+id/infoVerticalGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/labelAlbum"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/labelRelease"
+        style="@style/member_label"
+        android:text="@string/label_release"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/infoVerticalGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/labelGenre"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/memberLogin"
+        style="@style/member_info"
+        app:layout_constraintBottom_toTopOf="@id/memberCompany"
+        app:layout_constraintStart_toStartOf="@id/infoVerticalGuideline"
+        app:layout_constraintTop_toBottomOf="@id/horizontalGuideline"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/memberCompany"
+        style="@style/member_info"
+        app:layout_constraintBottom_toTopOf="@id/memberEmail"
+        app:layout_constraintStart_toStartOf="@id/infoVerticalGuideline"
+        app:layout_constraintTop_toBottomOf="@id/memberLogin"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/memberEmail"
+        style="@style/member_info"
+        app:layout_constraintBottom_toTopOf="@id/memberType"
+        app:layout_constraintStart_toStartOf="@id/infoVerticalGuideline"
+        app:layout_constraintTop_toBottomOf="@id/memberCompany"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/memberType"
+        style="@style/member_info"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/infoVerticalGuideline"
+        app:layout_constraintTop_toBottomOf="@id/memberEmail"
+        tools:visibility="visible" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/verticalGuideLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/infoVerticalGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".4" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontalGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".5" />
+
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:contentDescription="@string/backButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/abc_vector_test"
+        app:tint="@color/black"
+        tools:layout_editor_absoluteY="4dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
