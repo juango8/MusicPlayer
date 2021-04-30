@@ -9,4 +9,4 @@ class MetaData(
     var genre: String,
     var year: String,
     var albumCover: String = ""
-): Serializable
+) : Serializable

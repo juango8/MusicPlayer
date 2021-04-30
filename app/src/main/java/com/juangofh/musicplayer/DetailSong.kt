@@ -1,9 +1,7 @@
 package com.juangofh.musicplayer
 
-import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Bundle
-import android.util.LruCache
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_detail_song.*
 
